@@ -4,23 +4,23 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTests extends TestBase{
+public class LoginTests extends TestBase {
 
     @BeforeMethod
-    public void preCondition(){
+    public void preCondition() {
         //if Sign Out present----> LogOut
-        if(app.getHelperUser().isLogged()){
+        if (app.getHelperUser().isLogged()) {
             app.getHelperUser().Logout();
         }
     }
 
 
     @Test
-    public void loginSuccess(){
-       app.getHelperUser().openLoginRegistrationForm();
-       app.getHelperUser().fillLoginRegistrationForm("inna_83@gmail.com","Aa13579$");
-       app.getHelperUser().submitLogin();
-       // time ---> signOut
+    public void loginSuccess() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("inna_83@gmail.com", "Aa13579$");
+        app.getHelperUser().submitLogin();
+        // time ---> signOut
 
         //Assert is SignOut present
         //Assert.assertEquals(,);
@@ -33,12 +33,37 @@ public class LoginTests extends TestBase{
 
 
     @Test
-    public void loginSuccessModel(){
+    public void loginSuccessModel() {
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("inna_83@gmail.com","Aa13579$");
+        app.getHelperUser().fillLoginRegistrationForm("inna_83@gmail.com", "Aa13579$");
         app.getHelperUser().submitLogin();
 
         Assert.assertTrue(app.getHelperUser().isLogged());
+
+    }
+
+    @Test
+    public void loginWrongEmail() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("inna_83gmail.com", "Aa13579$");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+    }
+
+    @Test
+    public void loginWrongPassword() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("inna_83@gmail.com", "Aa13");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
+    }
+
+    @Test
+    public void loginUnregisteredUser() {
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm("pinokio@gmail.com", "Aa13975425$");
+        app.getHelperUser().submitLogin();
+        Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password"));
 
     }
 }
