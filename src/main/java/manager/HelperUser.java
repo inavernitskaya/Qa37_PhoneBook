@@ -1,5 +1,6 @@
 package manager;
 
+import models.User;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -38,10 +39,12 @@ public class HelperUser extends HelperBase{
 
     }
         public void submitLogin(){
-    click(By.xpath("//button[text()='Login']"));
+
+        click(By.xpath("//button[text()='Login']"));
     }
 
         public boolean isLogged(){
+
         return isElementPresent(By.xpath("//button[text()='Sign Out']"));
     }
 
@@ -64,4 +67,31 @@ public class HelperUser extends HelperBase{
         }
         return false;
     }
+///*********************** REGISTRATION ********************************
+    public void openRegistrationForm() {
+
+        click(By.cssSelector("a[href='/login']"));
+    }
+
+    public void fillRegistrationForm(User user) {
+        type(By.name("email"), user.getEmail());
+        type(By.name("password"), user.getPassword());
+    }
+
+
+    public void submitRegistration() {
+        click(By.xpath("//button[text()='Registration']"));
+    }
+
+
+    public boolean isAlertPresent1(String message) {
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        if(alert != null)
+            alert.accept();
+
+        return false;
+    }
 }
+
