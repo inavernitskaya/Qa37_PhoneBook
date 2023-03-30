@@ -10,6 +10,7 @@ public class ApplicationManager {
 
     WebDriver wd;
     HelperUser helperUser;
+    HelperContact helperContact;
 
 
     public void init(){
@@ -22,6 +23,7 @@ public class ApplicationManager {
 
         wd.navigate().to("https://telranedu.web.app/");
         helperUser = new HelperUser(wd);
+        helperContact = new HelperContact(wd);
     }
 
     public HelperUser getHelperUser() {
@@ -32,6 +34,7 @@ public class ApplicationManager {
         wd.quit();
     }
 
-
-
+    public HelperContact getHelperContact() {
+        return helperContact;
+    }
 }

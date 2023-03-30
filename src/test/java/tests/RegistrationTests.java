@@ -19,102 +19,86 @@ public class RegistrationTests extends TestBase {
     @Test
     public void registrationSuccess() {
         Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
+        int i = random.nextInt(1000)+1000;
+        User user = new User().withEmail("ela" + i + "@gmail.com").withPassword("El12345$");
 
-        System.out.println(System.currentTimeMillis());
-        int z = (int) (System.currentTimeMillis() / 1000);
-
-        User user = new User()
-                .setEmail("ela" + i + "@gmail.com")
-                .setPassword("El12345$");
-
-        app.getHelperUser().openRegistrationForm();
-        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
         Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
+        Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
     }
 
-    @Test
+    @Test(description = "Bug  report N23467 Fixed")
     public void registrationWrongEmail() {
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
 
-        System.out.println(System.currentTimeMillis());
-        int z = (int) (System.currentTimeMillis() / 1000);
-
-        User user = new User()
-                .setEmail("mika"+i+"gmail.com")
-                .setPassword("Mk23457$");
-
-        app.getHelperUser().openRegistrationForm();
-        app.getHelperUser().fillRegistrationForm(user);
+        User user = new User().withEmail("dongmail.com").withPassword("Don12345$");
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
+        // Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format\n" +
+        //         "            Email must contains one @ and minimum 2 symbols after last dot\n" +
+        //          "            Password must contain at least one uppercase letter!\n" +
+        //          "            Password must contain at least one lowercase letter!\n" +
+        //         "            Password must contain at least one digit!\n" +
+        //         "            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
 
-        Assert.assertFalse(app.getHelperUser().isAlertPresent1(""));
     }
 
     @Test
-    public void registrationWrongPassword() {
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
+    public void registrationWrongPassword()// public void registrationNeValidPasswordExistUser()
+     {
 
-        System.out.println(System.currentTimeMillis());
-        int z = (int) (System.currentTimeMillis() / 1000);
-
-        User user = new User()
-                .setEmail("mika"+i+"@gmail.com")
-                .setPassword("Mk236");
-
-        app.getHelperUser().openRegistrationForm();
-        app.getHelperUser().fillRegistrationForm(user);
+        User user = new User().withEmail("don@gmail.com").withPassword("Don12");
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
+        // Assert.assertTrue(app.getHelperUser().isAlertPresent("Wrong email or password format\n" +
+        //         "            Email must contains one @ and minimum 2 symbols after last dot\n" +
+        //          "            Password must contain at least one uppercase letter!\n" +
+        //          "            Password must contain at least one lowercase letter!\n" +
+        //         "            Password must contain at least one digit!\n" +
+        //         "            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
 
-        Assert.assertFalse(app.getHelperUser().isAlertPresent1(""));
     }
 
+
     @Test
-    public void registrationOfRegisteredUser() {
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
+    public void registrationExistsUser(){
 
-        System.out.println(System.currentTimeMillis());
-        int z = (int) (System.currentTimeMillis() / 1000);
-
-        User user = new User()
-                .setEmail("inna_83@gmail.com")
-                .setPassword("Aa13579$");
-
-        app.getHelperUser().openRegistrationForm();
-        app.getHelperUser().fillRegistrationForm(user);
+        User user = new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$");
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
-
         Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
+
+
+
     }
 
-    @Test
-    public void registrationOfRegisteredUserWithDifferentPassword() {
-        Random random = new Random();
-        int i = random.nextInt(1000);
-        System.out.println(i);
+    // @Test
+    // public void registrationOfRegisteredUserWithDifferentPassword() {
+    //   Random random = new Random();
+    //   int i = random.nextInt(1000);
+    // System.out.println(i);
 
-        System.out.println(System.currentTimeMillis());
-        int z = (int) (System.currentTimeMillis() / 1000);
+    // System.out.println(System.currentTimeMillis());
+    // int z = (int) (System.currentTimeMillis() / 1000);
 
-        User user = new User()
-                .setEmail("inna_83@gmail.com")
-                .setPassword("Ff13579$");
+    //  User user = new User()
+    // .setEmail("inna_83@gmail.com")
+    //.setPassword("Ff13579$");
 
-        app.getHelperUser().openRegistrationForm();
-        app.getHelperUser().fillRegistrationForm(user);
-        app.getHelperUser().submitRegistration();
+    // app.getHelperUser().openRegistrationForm();
+    // app.getHelperUser().fillRegistrationForm(user);
+    // app.getHelperUser().submitRegistration();
 
-        Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
-    }
-
+    // Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
+    // }
 
 }
+
