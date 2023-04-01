@@ -44,12 +44,7 @@ public class HelperUser extends HelperBase {
         click(By.xpath("//button[text()='Login']"));
     }
 
-    public boolean isLogged() {
-
-        return isElementPresent(By.xpath("//button[text()='Sign Out']"));
-    }
-
-    public void Logout() {
+     public void Logout() {
         click(By.xpath("//button[text()='Sign Out']"));
     }
 
@@ -116,4 +111,18 @@ public class HelperUser extends HelperBase {
 
         return wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")).getText();
     }
-}
+
+      public void login(User user) {
+            openLoginRegistrationForm();
+            fillLoginRegistrationForm(user);;
+            submitLogin();
+            closeWindow();
+
+        }
+
+    private void closeWindow() {
+         if (isElementPresent(By.xpath("//button[text()='Ok']")))
+            click(By.xpath("//button[text()='Ok']"));
+       }
+    }
+
