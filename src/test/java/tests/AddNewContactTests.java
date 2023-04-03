@@ -22,32 +22,34 @@ public class AddNewContactTests extends TestBase{
     public void addNewContactSuccessAll() {
         int i = new Random().nextInt(1000) + 1000;
         Contact cont = Contact.builder()
-                .name("Kate")
+                .name("Kate"+i)
                 .lastName("Ivanov")
-                .phone("78748494947346")
-                .email("katya@mail.com")
+                .phone("78748494947346"+i)
+                .email("katya"+i+"@mail.com")
                 .address("London,Trafalgar sq,5")
                 .description("student")
                 .build();
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         app.getHelperContact().saveContact();
-        Assert.assertTrue(app.getHelperContact().isLogged());
+        Assert.assertTrue(app.getHelperContact().isContactAddedByName(cont.getName()));
+        Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(cont.getPhone()));
     }
         @Test
         public void addNewContactSuccess() {
             int i= new Random().nextInt(1000) + 1000;
             Contact cont = Contact.builder()
-                    .name("Kate")
+                    .name("Kate"+i)
                     .lastName("Ivanov")
-                    .phone("78748494947346")
-                    .email("katya@mail.com")
+                    .phone("78748494947346"+i)
+                    .email("katya"+i+"@mail.com")
                     .address("London,Trafalgar sq,5")
                     .build();
             app.getHelperContact().openContactForm();
             app.getHelperContact().fillContactForm(cont);
             app.getHelperContact().saveContact();
-            Assert.assertTrue(app.getHelperContact().isLogged());
+            Assert.assertTrue(app.getHelperContact().isContactAddedByName(cont.getName()));
+            Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(cont.getPhone()));
         }
     }
 

@@ -37,4 +37,6 @@ public class ApplicationManager {
     public HelperContact getHelperContact() {
         return helperContact;
     }
+
+
 }

@@ -3,6 +3,9 @@ package manager;
 import models.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class HelperContact extends HelperBase {
     public HelperContact(WebDriver wd) {
@@ -10,7 +13,7 @@ public class HelperContact extends HelperBase {
     }
 
     public void openContactForm() {
-        pause(500);
+       // pause(500);
         click(By.cssSelector("a[href='/add']"));
     }
 
@@ -27,19 +30,27 @@ public class HelperContact extends HelperBase {
         click(By.xpath("//b[normalize-space()='Save']"));
     }
 
+    public boolean isContactAddedByName(String name) {
+        List<WebElement> list = (List<WebElement>) wd.findElement(By.cssSelector("h2"));
+        for (WebElement el:list) {
+           if ( el.getText().equals(name)){
+            return true;
+        }
+    }
+    return false;
+}
+
+    public boolean isContactAddedByPhone(String phone) {
+        List<WebElement> list = (List<WebElement>) wd.findElement(By.cssSelector("h3"));
+        for (WebElement el: list) {
+         if(el.getText().equals(phone)){
+             return true;
+         }
+        }
+        return false;
+    }
 }
 
 
-    //  public void fillCarForm(Car car) {
-    //     typeLocation(car.getLocation());
-    //    type(By.id("make"), car.getManufacture());
-    //     type(By.cssSelector("#model"), car.getModel());
-    //     type(By.xpath("//input[@id='year']"), car.getYear());
-    //     select(By.id("fuel"),car.getFuel());
-    //    type(By.id("seats"),String.valueOf(car.getSeats()));
-    //    type(By.id("class"), car.getCarClass());
-    //   type(By.id("serialNumber"),car.getCarRegNumber());
-    // type(By.id("price"),String.valueOf(car.getPrice()));
-    //     type(By.id("price"),car.getPrice()+"");
-    //    type(By.id("about"),car.getAbout());
+
 

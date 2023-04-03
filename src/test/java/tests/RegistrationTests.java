@@ -26,7 +26,8 @@ public class RegistrationTests extends TestBase {
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
-        Assert.assertTrue(app.getHelperUser().isLogged());
+        // Assert.assertTrue(app.getHelperUser().isLogged());
+        Assert.assertTrue(app.getHelperUser().isLogged(),"check is sing out present");
         Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
         Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
     }

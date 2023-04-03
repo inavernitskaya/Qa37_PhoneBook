@@ -45,8 +45,5 @@ public class HelperBase {
         }
     }
 
-    public boolean isLogged() {
 
-        return isElementPresent(By.xpath("//button[text()='Sign Out']"));
-    }
 }
