@@ -24,7 +24,7 @@ public class AddNewContactTests extends TestBase{
         Contact cont = Contact.builder()
                 .name("Kate"+i)
                 .lastName("Ivanov")
-                .phone("78748494947346"+i)
+                .phone("78748494"+i)
                 .email("katya"+i+"@mail.com")
                 .address("London,Trafalgar sq,5")
                 .description("student")
@@ -41,7 +41,7 @@ public class AddNewContactTests extends TestBase{
             Contact cont = Contact.builder()
                     .name("Kate"+i)
                     .lastName("Ivanov")
-                    .phone("78748494947346"+i)
+                    .phone("74849494"+i)
                     .email("katya"+i+"@mail.com")
                     .address("London,Trafalgar sq,5")
                     .build();
@@ -57,7 +57,7 @@ public class AddNewContactTests extends TestBase{
         Contact cont = Contact.builder()
                 .name("")
                 .lastName("Ivanov")
-                .phone("78748494947346")
+                .phone("787484949345")
                 .email("katya@mail.com")
                 .address("London,Trafalgar sq,5")
                 .build();
@@ -114,7 +114,7 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().fillContactForm(cont);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
-        Assert.assertTrue(app.getHelperUser().isAlertPresent(" Phone not valid : Phone number must contain only digits! And lenght min 10 max 15"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
 
     }
     @Test
@@ -131,7 +131,7 @@ public class AddNewContactTests extends TestBase{
         app.getHelperContact().fillContactForm(cont);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
-        Assert.assertTrue(app.getHelperUser().isAlertPresent("Email not valid: must be a well-formed email address"));
+        Assert.assertTrue(app.getHelperUser().isAlertPresent2("Email not valid: must be a well-formed email address"));
     }
 
     //"Contact added" eql "Contact added"
