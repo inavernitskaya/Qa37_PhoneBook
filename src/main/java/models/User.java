@@ -9,6 +9,7 @@ public class User {
         this.email = email;
         return this;
     }
+
     public User withPassword(String password) {
         this.password = password;
         return this;
@@ -17,6 +18,7 @@ public class User {
     public String getEmail() {
         return email;
     }
+
     public String getPassword() {
         return password;
     }

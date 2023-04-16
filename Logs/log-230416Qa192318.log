@@ -1,0 +1,6 @@
+19:23:22.229  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:23:23.230  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:23:23.315  INFO  tests.TestBase - Name of method-->registrationExistsUser
+19:23:29.384  INFO  tests.TestBase - Start test with name 'Registration of Exist User'
+19:23:29.386  INFO  tests.TestBase - Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'
+19:23:32.334  INFO  tests.TestBase - User already exist'

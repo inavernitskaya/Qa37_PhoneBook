@@ -50,7 +50,7 @@ public class HelperUser extends HelperBase {
         // return false;
     }
 
-     public void Logout() {
+    public void Logout() {
         click(By.xpath("//button[text()='Sign Out']"));
     }
 
@@ -73,7 +73,7 @@ public class HelperUser extends HelperBase {
 
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         System.out.println(alert.getText());
-        if(alert != null && alert.getText().contains(message)){
+        if (alert != null && alert.getText().contains(message)) {
 
             // click ok
             // pause
@@ -88,12 +88,12 @@ public class HelperUser extends HelperBase {
     }
 
     public boolean isNoContactsHereDisplayed() {
-        WebDriverWait wait = new WebDriverWait(wd,Duration.ofSeconds(5));
-        boolean res =wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")),"No Contacts here!"));
+        WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
+        boolean res = wait.until(ExpectedConditions.textToBePresentInElement(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")), "No Contacts here!"));
         return res;
     }
 
-    public String getMessage(){
+    public String getMessage() {
 
         WebDriverWait wait = new WebDriverWait(wd, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1"))));
@@ -101,17 +101,18 @@ public class HelperUser extends HelperBase {
         return wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")).getText();
     }
 
-      public void login(User user) {
-            openLoginRegistrationForm();
-            fillLoginRegistrationForm(user);;
-            submitLogin();
-            //closeWindow();
+    public void login(User user) {
+        openLoginRegistrationForm();
+        fillLoginRegistrationForm(user);
+        ;
+        submitLogin();
+        //closeWindow();
 
-        }
+    }
 
     private void closeWindow() {
-         if (isElementPresent(By.xpath("//button[text()='Ok']")))
+        if (isElementPresent(By.xpath("//button[text()='Ok']")))
             click(By.xpath("//button[text()='Ok']"));
-       }
     }
+}
 

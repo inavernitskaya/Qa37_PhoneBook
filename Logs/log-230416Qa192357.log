@@ -1,0 +1,19 @@
+19:24:01.605  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:24:02.290  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:24:02.403  INFO  tests.TestBase - Name of method-->registrationExistsUser
+19:24:08.435  INFO  tests.TestBase - Start test with name 'Registration of Exist User'
+19:24:08.438  INFO  tests.TestBase - Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'
+19:24:11.384  INFO  tests.TestBase - User already exist'
+19:24:11.401  INFO  tests.TestBase - Name of method-->registrationSuccess
+19:24:17.448  INFO  tests.TestBase - Start test with name 'RegistrationSuccess'
+19:24:20.562  INFO  tests.TestBase - Assert check is Element button 'Sign out' present
+19:24:20.563  INFO  tests.TestBase - Assert check is massage 'No Contacts here!' present
+19:24:20.565  INFO  tests.TestBase - Name of method-->registrationWrongEmail
+19:24:21.673  INFO  tests.TestBase - Before method finish logout
+19:24:21.676  INFO  tests.TestBase - Start test with name 'Registration with wrong Email'
+19:24:21.678  INFO  tests.TestBase - Test data---> email: 'dongmail.com' & password: 'Don12345$'
+19:24:24.056  INFO  tests.TestBase - Assert check is massage 'Wrong email or password format'
+19:24:24.062  INFO  tests.TestBase - Name of method-->registrationWrongPassword
+19:24:30.122  INFO  tests.TestBase - Start test with name 'Registration with wrong Password'
+19:24:30.123  INFO  tests.TestBase - Test data---> email: 'don@gmail.com' & password: 'Don12'
+19:24:32.540  INFO  tests.TestBase - Assert check is massage 'Wrong email or password format'

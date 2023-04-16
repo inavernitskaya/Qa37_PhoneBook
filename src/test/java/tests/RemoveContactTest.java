@@ -7,24 +7,24 @@ import org.testng.annotations.Test;
 
 public class RemoveContactTest extends TestBase {
     @BeforeClass
-    public void preCondition(){
-        if(!app.getHelperUser().isLogged()){
+    public void preCondition() {
+        if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$"));
         }
-       app.getHelperContact().provideContacts(); ///if list<3 =====> add 3 contacts
+        app.getHelperContact().provideContacts(); ///if list<3 =====> add 3 contacts
     }
 
     @Test
-    public void removeFirstContact(){
+    public void removeFirstContact() {
         //Assert size list less when one
         //app.getHelperContact().removeFirstContact();
-        Assert.assertEquals(app.helperContact().removeOneContact(),1);
+        Assert.assertEquals(app.helperContact().removeOneContact(), 1);
     }
 
     @Test
-    public void removeAllContact(){
+    public void removeAllContact() {
         // "No contacts Here"
-      app.helperContact().removeAllContacts();
-        Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
+        app.helperContact().removeAllContacts();
+        Assert.assertEquals(app.getHelperUser().getMessage(), "No Contacts here!");
     }
 }

@@ -21,18 +21,19 @@ public class HelperBase {
     }
 
 
-    public void type (By locator, String text){
+    public void type(By locator, String text) {
         WebElement element = wd.findElement(locator);
         element.click();
         element.clear();
         clearNew(element);
 
-        if(text!= null){
+        if (text != null) {
 
             element.sendKeys(text);
         }
     }
-    public void clearNew(WebElement element){
+
+    public void clearNew(WebElement element) {
         element.sendKeys(" ");
         element.sendKeys(Keys.BACK_SPACE);
 
@@ -80,19 +81,19 @@ public class HelperBase {
 
     public void getScreen(String link) {
         TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
-        File tmp =takesScreenshot.getScreenshotAs(OutputType.FILE);
+        File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
-            Files.copy(tmp,new File(link));
+            Files.copy(tmp, new File(link));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void getScreenElement(String link,By locator) {
+    public void getScreenElement(String link, By locator) {
         WebElement element = wd.findElement(locator);
-       File tmp= element.getScreenshotAs(OutputType.FILE);
+        File tmp = element.getScreenshotAs(OutputType.FILE);
         try {
-            Files.copy(tmp,new File(link));
+            Files.copy(tmp, new File(link));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

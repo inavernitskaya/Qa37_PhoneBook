@@ -13,29 +13,35 @@ public class RegistrationTests extends TestBase {
     public void preCondition() {
         if (app.getHelperUser().isLogged()) {
             app.getHelperUser().Logout();
+            logger.info("Before method finish logout");
         }
     }
 
     @Test
     public void registrationSuccess() {
+        logger.info("Start test with name 'RegistrationSuccess'");
         Random random = new Random();
-        int i = random.nextInt(1000)+1000;
+        int i = random.nextInt(1000) + 1000;
         User user = new User().withEmail("ela" + i + "@gmail.com").withPassword("El12345$");
-
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
 
         // Assert.assertTrue(app.getHelperUser().isLogged());
-        Assert.assertTrue(app.getHelperUser().isLogged(),"check is sing out present");
+        Assert.assertTrue(app.getHelperUser().isLogged(), "check is sing out present");
         Assert.assertTrue(app.getHelperUser().isNoContactsHereDisplayed());
-        Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
+        Assert.assertEquals(app.getHelperUser().getMessage(), "No Contacts here!");
+        logger.info("Assert check is Element button 'Sign out' present");
+        logger.info("Assert check is massage 'No Contacts here!' present");
     }
 
     @Test(description = "Bug  report N23467 Fixed")
     public void registrationWrongEmail() {
+        logger.info("Start test with name 'Registration with wrong Email'");
 
         User user = new User().withEmail("dongmail.com").withPassword("Don12345$");
+        logger.info("Test data---> email: 'dongmail.com' & password: 'Don12345$'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
@@ -46,14 +52,17 @@ public class RegistrationTests extends TestBase {
         //         "            Password must contain at least one digit!\n" +
         //         "            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!"));
         Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
-
+        logger.info("Assert check is massage 'Wrong email or password format'");
     }
 
     @Test
     public void registrationWrongPassword()// public void registrationNeValidPasswordExistUser()
-     {
+    {
+        logger.info("Start test with name 'Registration with wrong Password'");
 
         User user = new User().withEmail("don@gmail.com").withPassword("Don12");
+        logger.info("Test data---> email: 'don@gmail.com' & password: 'Don12'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
@@ -64,19 +73,22 @@ public class RegistrationTests extends TestBase {
         //         "            Password must contain at least one digit!\n" +
         //         "            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!"));
         Assert.assertTrue(app.getHelperUser().isAlertPresent2("Wrong email or password format"));
-
+        logger.info("Assert check is massage 'Wrong email or password format'");
     }
 
 
     @Test
-    public void registrationExistsUser(){
+    public void registrationExistsUser() {
+        logger.info("Start test with name 'Registration of Exist User'");
 
         User user = new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$");
+        logger.info("Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
         Assert.assertTrue(app.getHelperUser().isAlertPresent("User already exist"));
-
+        logger.info("User already exist'");
 
 
     }

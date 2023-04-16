@@ -10,22 +10,23 @@ import org.testng.annotations.BeforeSuite;
 import java.lang.reflect.Method;
 
 public class TestBase {
-   Logger logger = LoggerFactory.getLogger(TestBase.class);
+    Logger logger = LoggerFactory.getLogger(TestBase.class);
 
-   static ApplicationManager app = new ApplicationManager();
+    static ApplicationManager app = new ApplicationManager();
 
-   @BeforeMethod
-   public void startLogger(Method m){
-      logger.info("Name of method-->" +m.getName());
-   }
+    @BeforeMethod
+    public void startLogger(Method m) {
+        logger.info("Name of method-->" + m.getName());
+    }
 
-   @BeforeSuite
-   public void setUp(){
+    @BeforeSuite
+    public void setUp() {
 
-      app.init();
-   }
-   @AfterSuite
-   public void tearDown(){
-      // app.stop();
-   }
+        app.init();
+    }
+
+    @AfterSuite
+    public void tearDown() {
+        // app.stop();
+    }
 }
