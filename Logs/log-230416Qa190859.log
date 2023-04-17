@@ -1,6 +1,0 @@
-9:09:07.789  INFO  manager.ApplicationManager - All tests run in Chrome Browser
-19:09:08.934  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
-19:09:09.013  INFO  tests.TestBase - Name of method-->registrationSuccess
-19:09:15.058  INFO  tests.TestBase - Start test with name 'RegistrationSuccess'
-19:09:18.826  INFO  tests.TestBase - Assert check is Element button 'Sign out' present
-19:09:18.827  INFO  tests.TestBase - Assert check is massage 'No Contacts here!' present

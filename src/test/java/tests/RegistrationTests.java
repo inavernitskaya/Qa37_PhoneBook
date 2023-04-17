@@ -23,6 +23,7 @@ public class RegistrationTests extends TestBase {
         Random random = new Random();
         int i = random.nextInt(1000) + 1000;
         User user = new User().withEmail("ela" + i + "@gmail.com").withPassword("El12345$");
+        logger.info("Tests run with data:--->" +user.toString());
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitRegistration();
@@ -40,7 +41,7 @@ public class RegistrationTests extends TestBase {
         logger.info("Start test with name 'Registration with wrong Email'");
 
         User user = new User().withEmail("dongmail.com").withPassword("Don12345$");
-        logger.info("Test data---> email: 'dongmail.com' & password: 'Don12345$'");
+        logger.info("Tests run with data:--->" +user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
@@ -61,7 +62,7 @@ public class RegistrationTests extends TestBase {
         logger.info("Start test with name 'Registration with wrong Password'");
 
         User user = new User().withEmail("don@gmail.com").withPassword("Don12");
-        logger.info("Test data---> email: 'don@gmail.com' & password: 'Don12'");
+        logger.info("Tests run with data:--->" +user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
@@ -82,7 +83,7 @@ public class RegistrationTests extends TestBase {
         logger.info("Start test with name 'Registration of Exist User'");
 
         User user = new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$");
-        logger.info("Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'");
+        logger.info("Tests run with data:--->" +user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);

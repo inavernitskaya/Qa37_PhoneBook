@@ -1,6 +1,0 @@
-19:17:34.249  INFO  manager.ApplicationManager - All tests run in Chrome Browser
-19:17:35.031  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
-19:17:35.145  INFO  tests.TestBase - Name of method-->registrationWrongEmail
-19:17:41.194  INFO  tests.TestBase - Start test with name 'Registration with wrong Email'
-19:17:41.198  INFO  tests.TestBase - Test data---> email: 'dongmail.com' & password: 'Don12345$'
-19:17:44.288  INFO  tests.TestBase - Assert check is massage 'Wrong email or password format'

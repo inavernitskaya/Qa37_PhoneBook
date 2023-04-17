@@ -10,14 +10,17 @@ public class RemoveContactTest extends TestBase {
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$"));
+            logger.info("Before method finish logout");
+
         }
-        app.getHelperContact().provideContacts(); ///if list<3 =====> add 3 contacts
+       app.getHelperContact().provideContacts(); ///if list<3 =====> add 3 contacts
     }
 
     @Test
     public void removeFirstContact() {
         //Assert size list less when one
         //app.getHelperContact().removeFirstContact();
+        //logger.info("Start test with name 'RegistrationSuccess'");
         Assert.assertEquals(app.helperContact().removeOneContact(), 1);
     }
 

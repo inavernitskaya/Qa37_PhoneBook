@@ -1,0 +1,23 @@
+19:14:10.218  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:14:12.444  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:14:12.521  INFO  tests.TestBase - Name of method-->loginSuccessModel
+19:14:13.540  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:14:18.589  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:14:18.594  INFO  manager.ListenerWD - List of elements is--->0
+19:14:18.598  INFO  tests.TestBase - Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'
+19:14:18.631  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/login']
+19:14:18.688  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+19:14:18.708  INFO  manager.ListenerWD - Location of element(1169, 34)
+19:14:18.792  INFO  manager.ListenerWD - Before Find Element--->By.name: email
+19:14:18.848  INFO  manager.ListenerWD - After Find Element--->By.name: email
+19:14:18.874  INFO  manager.ListenerWD - Location of element(431, 250)
+19:14:19.206  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //input[last()]
+19:14:19.256  INFO  manager.ListenerWD - After Find Element--->By.xpath: //input[last()]
+19:14:19.275  INFO  manager.ListenerWD - Location of element(431, 320)
+19:14:19.588  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[text()='Login']
+19:14:19.637  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Login']
+19:14:19.656  INFO  manager.ListenerWD - Location of element(431, 390)
+19:14:20.729  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:14:20.906  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:14:20.906  INFO  manager.ListenerWD - List of elements is--->1
+19:14:20.912  INFO  tests.TestBase - Assert check is Element button 'Sign out' present

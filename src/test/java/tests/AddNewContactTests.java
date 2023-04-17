@@ -32,7 +32,7 @@ public class AddNewContactTests extends TestBase {
                 .address("London,Trafalgar sq,5")
                 .description("all fields")
                 .build();
-        //logger.info
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         //app.getHelperContact().pause(15000);
@@ -51,6 +51,7 @@ public class AddNewContactTests extends TestBase {
                 .email("katya" + i + "@mail.com")
                 .address("London,Trafalgar sq,5")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         // app.getHelperContact().pause(15000);
@@ -69,6 +70,7 @@ public class AddNewContactTests extends TestBase {
                 .address("London,Trafalgar sq,5")
                 .description("empty name")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         // app.getHelperContact().pause(15000);
@@ -87,6 +89,7 @@ public class AddNewContactTests extends TestBase {
                 .address("")
                 .description("empty address")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         //  app.getHelperContact().pause(15000);
@@ -106,6 +109,7 @@ public class AddNewContactTests extends TestBase {
                 .address("NY")
                 .description("empty last name")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         app.getHelperContact().getScreen("src/test/screenshots/screen-" + i + ".png");
@@ -125,13 +129,14 @@ public class AddNewContactTests extends TestBase {
                 .address("NY")
                 .description("empty phone")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         //app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
         Assert.assertTrue(app.getHelperUser().isAlertPresent2(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
-
+        logger.info("Tests finish with massage: 'Phone not valid: Phone number must contain only digits! And length min 10, max 15!'");
     }
 
     @Test
@@ -144,12 +149,14 @@ public class AddNewContactTests extends TestBase {
                 .address("NY")
                 .description("empty email")
                 .build();
+        logger.info("Tests run with data:--->" +cont.toString());
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(cont);
         //app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
         Assert.assertTrue(app.getHelperUser().isAlertPresent2("Email not valid: must be a well-formed email address"));
+        logger.info("Tests finish with massage:'Email not valid: must be a well-formed email address'");
     }
 
     //"Contact added" eql "Contact added"

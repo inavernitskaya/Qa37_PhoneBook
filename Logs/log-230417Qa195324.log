@@ -1,0 +1,31 @@
+19:53:25.674  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+19:53:27.822  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:53:27.847  INFO  tests.TestBase - Name of method-->loginSuccessModel
+19:53:28.850  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:53:33.874  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+19:53:33.879  INFO  manager.ListenerWD - List of elements is--->0
+19:53:33.880  INFO  tests.TestBase - Test data---> email: 'inna_83@gmail.com' & password: 'Aa13579$'
+19:53:33.888  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/login']
+19:53:33.924  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+19:53:33.939  INFO  manager.ListenerWD - Location of element(1169, 34)
+19:53:33.985  INFO  manager.ListenerWD - Before Find Element--->By.name: email
+19:53:34.007  INFO  manager.ListenerWD - After Find Element--->By.name: email
+19:53:34.019  INFO  manager.ListenerWD - Location of element(431, 250)
+19:53:34.163  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //input[la]
+19:53:39.228  INFO  manager.ListenerWD - Huston we have a problem!
+19:53:39.230  INFO  manager.ListenerWD - Object target--->ChromeDriver: chrome on WINDOWS (87ebb931f27ad4f3672c8c876f66deeb)
+19:53:39.230  INFO  manager.ListenerWD - *************
+19:53:39.231  INFO  manager.ListenerWD - Method namefindElement
+19:53:39.231  INFO  manager.ListenerWD - *************
+19:53:39.231  INFO  manager.ListenerWD - *************
+19:53:39.232  INFO  manager.ListenerWD - *************
+19:53:39.235  INFO  manager.ListenerWD - InvocationTargetException3 & org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[la]"}
+  (Session info: chrome=112.0.5615.121)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [87ebb931f27ad4f3672c8c876f66deeb, findElement {using=xpath, value=//input[la]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.121, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\ADAM-M~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55093}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55093/devtoo..., se:cdpVersion: 112.0.5615.121, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 87ebb931f27ad4f3672c8c876f66deeb
+19:53:39.237  INFO  manager.ListenerWD - *************
