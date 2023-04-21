@@ -1,5 +1,0 @@
-18:35:09.229  INFO  manager.ApplicationManager - All tests run in Chrome Browser
-18:35:10.161  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
-18:35:29.991  INFO  tests.TestBase - Name of method-->removeFirstContact
-18:35:30.011  INFO  manager.HelperBase - Number of Contacts  list before remove is--->3
-18:35:31.224  INFO  manager.HelperBase - Number of Contacts  list after remove is--->2

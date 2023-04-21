@@ -20,7 +20,6 @@ public class RemoveContactTest extends TestBase {
     public void removeFirstContact() {
         //Assert size list less when one
         //app.getHelperContact().removeFirstContact();
-        //logger.info("Start test with name 'RegistrationSuccess'");
         Assert.assertEquals(app.helperContact().removeOneContact(), 1);
     }
 
