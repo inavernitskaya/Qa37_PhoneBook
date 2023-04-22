@@ -21,28 +21,17 @@ public class AddNewContactTests extends TestBase {
     }
 
     @Test(dataProvider = "contactSuccess",dataProviderClass = DataProviderContact.class)
-    public void addNewContactSuccessAll() {
+    public void  addContactSuccessAllFields(Contact contact) {
 
-        //logger.info("Start test with name 'Add new contact Success all'");
-        //int i = new Random().nextInt(1000) + 1000;
-        //Contact cont = Contact.builder()
-          //      .name("Kate")
-            //    .lastName("Ivanov")
-              //  .phone("78748494" + i)
-                //.email("katya" + i + "@mail.com")
-               // .address("London,Trafalgar sq,5")
-                //.description("all fields")
-                //.build();
-        logger.info("Tests run with data:--->" +cont.toString());
-        app.getHelperContact().openContactForm();
-        app.getHelperContact().fillContactForm(cont);
-        //app.getHelperContact().pause(15000);
-        app.getHelperContact().saveContact();
-        Assert.assertTrue(app.getHelperContact().isContactAddedByName(cont.getName()));
-        Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(cont.getPhone()));
+        logger.info("Tests run with data: --->" + contact.toString());
+        app.helperContact().openContactForm();
+        app.helperContact().fillContactForm(contact);
+        app.helperContact().saveContact();
+        Assert.assertTrue(app.helperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
     }
 
-    @Test
+        @Test
     public void addNewContactSuccess() {
         int i = new Random().nextInt(1000) + 1000;
         Contact cont = Contact.builder()

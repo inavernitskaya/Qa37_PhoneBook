@@ -8,36 +8,34 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Random;
 
-public class HelperContact extends HelperBase {
+public class HelperContact extends HelperBase{
     public HelperContact(WebDriver wd) {
         super(wd);
     }
 
     public void openContactForm() {
-        // pause(500);
         click(By.cssSelector("a[href='/add']"));
     }
 
-    public void fillContactForm(Contact cont) {
-        type(By.cssSelector("input[placeholder='Name']"), cont.getName());
-        type(By.cssSelector("input[placeholder='Last Name']"), cont.getLastName());
-        type(By.cssSelector("input[placeholder='Phone']"), cont.getPhone());
-        type(By.xpath("//input[@placeholder='email']"), cont.getEmail());
-        type(By.cssSelector("input[placeholder='Address']"), cont.getAddress());
-        type(By.xpath("//input[@placeholder='description']"), cont.getDescription());
+    public void fillContactForm(Contact contact) {
+        type(By.cssSelector("[placeholder='Name']"), contact.getName());
+        type(By.cssSelector("[placeholder='Last Name']"), contact.getLastName());
+        type(By.cssSelector("[placeholder='Phone']"), contact.getPhone());
+        type(By.cssSelector("[placeholder='email']"), contact.getEmail());
+        type(By.cssSelector("[placeholder='Address']"), contact.getAddress());
+        type(By.cssSelector("[placeholder='description']"), contact.getDescription());
     }
 
-
     public void saveContact() {
-
-        getScreenElement("src/test/screenshots/screen-btn.png", By.cssSelector(".add_form__2rsm2>button"));
+        getScreenElement("src/test/screenshots/screen-btn.png",By.cssSelector(".add_form__2rsm2>button"));
         click(By.cssSelector(".add_form__2rsm2>button"));
+
     }
 
     public boolean isContactAddedByName(String name) {
-        List<WebElement> list = wd.findElements(By.cssSelector("h2"));
-        for (WebElement el : list) {
-            if (el.getText().equals(name)) {
+        List<WebElement> list =wd.findElements(By.cssSelector("h2"));
+        for (WebElement el:list) {
+            if( el.getText().equals(name)){
                 return true;
             }
 
@@ -46,10 +44,10 @@ public class HelperContact extends HelperBase {
     }
 
     public boolean isContactAddedByPhone(String phone) {
-        List<WebElement> list = wd.findElements(By.cssSelector("h3"));
+        List<WebElement> list =wd.findElements(By.cssSelector("h3"));
 
-        for (WebElement el : list) {
-            if (el.getText().equals(phone)) {
+        for(WebElement el:list){
+            if(el.getText().equals(phone)){
                 return true;
             }
         }
@@ -57,11 +55,10 @@ public class HelperContact extends HelperBase {
     }
 
     public boolean isAddPageStillDisplayed() {
-
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
 
-       public int removeOneContact() {
+    public int removeOneContact() {
         int  before =countOfContacts();
         logger.info("Number of Contacts  list before remove is--->"+before);
         removeContact();
@@ -72,8 +69,8 @@ public class HelperContact extends HelperBase {
     }
 
     private void removeContact() {
-        click(By.cssSelector(".contact-item_card__2SOIM"));
-        click(By.xpath("//button[text()='Remove']"));
+        click(By.cssSelector("div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)"));
+        click(By.xpath("//button[normalize-space()='Remove']"));
         pause(1000);
     }
 
@@ -97,23 +94,19 @@ public class HelperContact extends HelperBase {
         }
     }
 
-    public void addOneContact() {
-        int i = new Random().nextInt(1000) + 1000;
+    private void addOneContact() {
+        int i = new Random().nextInt(1000)+1000;
         Contact contact = Contact.builder()
-                .name("Harry" + i)
+                .name("Harry"+i)
                 .lastName("Potter")
-                .phone("78748494" + i)
-                .email("harry" + i + "@mail.com")
                 .address("Hogwards")
+                .email("harry"+i+"@gmail.com")
+                .phone("55566777"+i)
                 .description("Friend")
                 .build();
         openContactForm();
         fillContactForm(contact);
-         saveContact();
-         pause(500);
+        saveContact();
+        pause(500);
     }
 }
-
-
-
-

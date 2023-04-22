@@ -1,0 +1,181 @@
+14:20:39.733  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+14:20:41.847  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+14:20:42.913  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+14:20:47.955  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+14:20:47.963  INFO  manager.ListenerWD - List of elements is--->0
+14:20:47.966  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/login']
+14:20:48.033  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+14:20:48.088  INFO  manager.ListenerWD - Location of element(1169, 34)
+14:20:48.203  INFO  manager.ListenerWD - Before Find Element--->By.name: email
+14:20:48.270  INFO  manager.ListenerWD - After Find Element--->By.name: email
+14:20:48.304  INFO  manager.ListenerWD - Location of element(431, 250)
+14:20:48.665  INFO  manager.ListenerWD - Before Find Element--->By.name: password
+14:20:48.720  INFO  manager.ListenerWD - After Find Element--->By.name: password
+14:20:48.738  INFO  manager.ListenerWD - Location of element(431, 320)
+14:20:49.038  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[text()='Login']
+14:20:49.090  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Login']
+14:20:49.113  INFO  manager.ListenerWD - Location of element(431, 390)
+14:20:49.190  INFO  tests.TestBase - Before method finish logout
+14:20:49.190  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:20:50.801  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:20:50.802  INFO  manager.ListenerWD - List of elements is--->2
+14:20:50.817  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/add']
+14:20:50.869  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/add']
+14:20:50.888  INFO  manager.ListenerWD - Location of element(1000, 34)
+14:20:50.972  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Name']
+14:20:51.031  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Name']
+14:20:51.051  INFO  manager.ListenerWD - Location of element(201, 165)
+14:20:51.372  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:51.432  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:51.454  INFO  manager.ListenerWD - Location of element(201, 238)
+14:20:51.766  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:51.816  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:51.839  INFO  manager.ListenerWD - Location of element(201, 311)
+14:20:52.168  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='email']
+14:20:52.224  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='email']
+14:20:52.246  INFO  manager.ListenerWD - Location of element(201, 385)
+14:20:52.597  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Address']
+14:20:52.653  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Address']
+14:20:52.672  INFO  manager.ListenerWD - Location of element(201, 458)
+14:20:53.001  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='description']
+14:20:53.063  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='description']
+14:20:53.085  INFO  manager.ListenerWD - Location of element(201, 531)
+14:20:53.378  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:53.433  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:53.453  INFO  manager.ListenerWD - Location of element(204, 605)
+14:20:53.689  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:53.733  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:53.749  INFO  manager.ListenerWD - Location of element(204, 514)
+14:20:54.322  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/add']
+14:20:54.362  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/add']
+14:20:54.380  INFO  manager.ListenerWD - Location of element(986, -9)
+14:20:54.440  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Name']
+14:20:54.498  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Name']
+14:20:54.515  INFO  manager.ListenerWD - Location of element(201, 165)
+14:20:54.823  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:54.871  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:54.897  INFO  manager.ListenerWD - Location of element(201, 238)
+14:20:55.172  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:55.206  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:55.228  INFO  manager.ListenerWD - Location of element(201, 311)
+14:20:55.512  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='email']
+14:20:55.545  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='email']
+14:20:55.562  INFO  manager.ListenerWD - Location of element(201, 385)
+14:20:55.872  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Address']
+14:20:55.912  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Address']
+14:20:55.932  INFO  manager.ListenerWD - Location of element(201, 458)
+14:20:56.206  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='description']
+14:20:56.243  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='description']
+14:20:56.266  INFO  manager.ListenerWD - Location of element(201, 531)
+14:20:56.580  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:56.606  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:56.629  INFO  manager.ListenerWD - Location of element(204, 605)
+14:20:56.790  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:56.828  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:56.845  INFO  manager.ListenerWD - Location of element(204, 514)
+14:20:57.431  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/add']
+14:20:57.466  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/add']
+14:20:57.483  INFO  manager.ListenerWD - Location of element(1000, 34)
+14:20:57.553  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Name']
+14:20:57.599  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Name']
+14:20:57.619  INFO  manager.ListenerWD - Location of element(201, 165)
+14:20:57.945  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:57.974  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Last Name']
+14:20:57.998  INFO  manager.ListenerWD - Location of element(201, 238)
+14:20:58.291  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:58.320  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Phone']
+14:20:58.343  INFO  manager.ListenerWD - Location of element(201, 311)
+14:20:58.652  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='email']
+14:20:58.686  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='email']
+14:20:58.708  INFO  manager.ListenerWD - Location of element(201, 385)
+14:20:59.062  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='Address']
+14:20:59.089  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='Address']
+14:20:59.113  INFO  manager.ListenerWD - Location of element(201, 458)
+14:20:59.427  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: [placeholder='description']
+14:20:59.461  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: [placeholder='description']
+14:20:59.485  INFO  manager.ListenerWD - Location of element(201, 531)
+14:20:59.803  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:59.837  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:20:59.861  INFO  manager.ListenerWD - Location of element(204, 605)
+14:20:59.984  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:21:00.027  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .add_form__2rsm2>button
+14:21:00.045  INFO  manager.ListenerWD - Location of element(204, 514)
+14:21:00.657  INFO  tests.TestBase - Name of method-->removeAllContact
+14:21:00.662  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:00.740  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:00.740  INFO  manager.ListenerWD - List of elements is--->5
+14:21:00.740  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:00.774  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:00.797  INFO  manager.ListenerWD - Location of element(192, 150)
+14:21:00.890  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:00.938  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:00.959  INFO  manager.ListenerWD - Location of element(635, 371)
+14:21:02.035  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:02.102  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:02.103  INFO  manager.ListenerWD - List of elements is--->4
+14:21:02.104  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:02.132  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:02.152  INFO  manager.ListenerWD - Location of element(192, 150)
+14:21:02.207  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:02.248  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:02.270  INFO  manager.ListenerWD - Location of element(635, 371)
+14:21:03.350  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:03.406  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:03.407  INFO  manager.ListenerWD - List of elements is--->3
+14:21:03.407  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:03.436  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:03.453  INFO  manager.ListenerWD - Location of element(192, 150)
+14:21:03.512  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:03.555  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:03.573  INFO  manager.ListenerWD - Location of element(635, 371)
+14:21:04.637  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:04.678  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:04.679  INFO  manager.ListenerWD - List of elements is--->2
+14:21:04.679  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:04.704  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:04.720  INFO  manager.ListenerWD - Location of element(192, 150)
+14:21:04.791  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:04.833  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:04.855  INFO  manager.ListenerWD - Location of element(635, 371)
+14:21:05.936  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:05.968  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:05.969  INFO  manager.ListenerWD - List of elements is--->1
+14:21:05.969  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:06.001  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:06.019  INFO  manager.ListenerWD - Location of element(192, 150)
+14:21:06.078  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:06.116  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[normalize-space()='Remove']
+14:21:06.137  INFO  manager.ListenerWD - Location of element(635, 371)
+14:21:07.207  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:12.263  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:12.263  INFO  manager.ListenerWD - List of elements is--->0
+14:21:12.269  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .contact-page_message__2qafk>h1
+14:21:12.306  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .contact-page_message__2qafk>h1
+14:21:12.329  INFO  manager.ListenerWD - Location of element(505, 271)
+14:21:12.372  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: .contact-page_message__2qafk>h1
+14:21:12.409  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: .contact-page_message__2qafk>h1
+14:21:12.429  INFO  manager.ListenerWD - Location of element(505, 271)
+14:21:12.470  INFO  tests.TestBase - Name of method-->removeFirstContact
+14:21:12.472  INFO  manager.ListenerWD - Before Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:17.527  INFO  manager.ListenerWD - After Find ElementS--->By.cssSelector: .contact-item_card__2SOIM
+14:21:17.528  INFO  manager.ListenerWD - List of elements is--->0
+14:21:17.528  INFO  manager.HelperBase - Number of Contacts  list before remove is--->0
+14:21:17.529  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)
+14:21:22.599  INFO  manager.ListenerWD - Huston we have a problem!
+14:21:22.600  INFO  manager.ListenerWD - Object target--->ChromeDriver: chrome on WINDOWS (f2250a1195f372dce584f78276b8f8c9)
+14:21:22.600  INFO  manager.ListenerWD - *************
+14:21:22.601  INFO  manager.ListenerWD - Method namefindElement
+14:21:22.601  INFO  manager.ListenerWD - *************
+14:21:22.601  INFO  manager.ListenerWD - *************
+14:21:22.601  INFO  manager.ListenerWD - *************
+14:21:22.603  INFO  manager.ListenerWD - InvocationTargetException & getTargetExceptionorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f2250a1195f372dce584f78276b8f8c9, findElement {using=css selector, value=div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\ADAM-M~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50345}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50345/devtoo..., se:cdpVersion: 112.0.5615.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f2250a1195f372dce584f78276b8f8c9
+14:21:22.603  INFO  manager.ListenerWD - *************
+14:21:22.604  INFO  manager.ListenerWD - Screen with error is--->src/test/screenshots/screen_1777.png

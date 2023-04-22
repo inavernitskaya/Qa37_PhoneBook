@@ -17,10 +17,9 @@ public class RemoveContactTest extends TestBase {
     }
 
     @Test
-    public void removeFirstContact() {
-        //Assert size list less when one
-        //app.getHelperContact().removeFirstContact();
-        Assert.assertEquals(app.helperContact().removeOneContact(), 1);
+    public void removeFirstContact(){
+        Assert.assertEquals(app.helperContact().removeOneContact(),1);
+
     }
 
     @Test
