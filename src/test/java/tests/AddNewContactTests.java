@@ -109,24 +109,24 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
-    public void addNewContactWrongPhone() {
-        Contact cont = Contact.builder()
-                .name("Kate")
-                .lastName("Ivanov")
-                .phone("")
-                .email("katya@mail.com")
-                .address("NY")
-                .description("empty phone")
-                .build();
-        logger.info("Tests run with data:--->" +cont.toString());
-        app.getHelperContact().openContactForm();
-        app.getHelperContact().fillContactForm(cont);
-        //app.getHelperContact().pause(15000);
-        app.getHelperContact().saveContact();
-        Assert.assertTrue(app.getHelperContact().isAddPageStillDisplayed());
-        Assert.assertTrue(app.getHelperUser().isAlertPresent2(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
-        logger.info("Tests finish with massage: 'Phone not valid: Phone number must contain only digits! And length min 10, max 15!'");
+    @Test(dataProvider = "contactWrongPhone",dataProviderClass = DataProviderContact.class)
+    public void addNewContactWrongPhone(Contact contact){
+//        Contact contact = Contact.builder()
+//                .name("Tony")
+//                .lastName("Stark")
+//                .address("NY")
+//                .phone("")
+//                .email("stark@gmail.com")
+//                .description("empty phone")
+//                .build();
+        logger.info("Tests run with data: --->"+contact.toString());
+        app.helperContact().openContactForm();
+        app.helperContact().fillContactForm(contact);
+        app.helperContact().saveContact();
+        Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
+        Assert.assertTrue(app.getHelperUser().isAlertPresent(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
+
+
     }
 
     @Test

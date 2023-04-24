@@ -69,8 +69,8 @@ public class HelperContact extends HelperBase{
     }
 
     private void removeContact() {
-        click(By.cssSelector("div[class='contact-page_leftdiv__yhyke'] div div:nth-child(1)"));
-        click(By.xpath("//button[normalize-space()='Remove']"));
+        click(By.cssSelector(".contact-item_card__2SOIM"));
+        click(By.xpath("//button[text()='Remove']"));
         pause(1000);
     }
 

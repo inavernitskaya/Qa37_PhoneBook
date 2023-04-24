@@ -2,30 +2,33 @@ package tests;
 
 import models.User;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RemoveContactTest extends TestBase {
-    @BeforeClass
-    public void preCondition() {
+public class RemoveContactTests extends TestBase{
+
+    @BeforeMethod
+    public void preCondition(){
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$"));
             logger.info("Before method finish logout");
 
         }
-       app.getHelperContact().provideContacts(); ///if list<3 =====> add 3 contacts
+        app.helperContact().provideContacts();
+
     }
+
 
     @Test
     public void removeFirstContact(){
         Assert.assertEquals(app.helperContact().removeOneContact(),1);
 
     }
-
     @Test
-    public void removeAllContact() {
-        // "No contacts Here"
+    public void removeAllContacts(){
         app.helperContact().removeAllContacts();
-        Assert.assertEquals(app.getHelperUser().getMessage(), "No Contacts here!");
+        Assert.assertEquals(app.getHelperUser().getMessage(),"No Contacts here!");
+
     }
 }

@@ -1,0 +1,48 @@
+20:46:40.190  INFO  manager.ApplicationManager - All tests run in Chrome Browser
+20:46:43.146  INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:46:43.232  INFO  tests.TestBase - Name of method-->loginSuccessModelDP
+20:46:44.250  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:49.293  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:49.298  INFO  manager.ListenerWD - List of elements is--->0
+20:46:49.315  INFO  tests.TestBase - Test data---> User{email='inna_83@gmail.com', password='Aa13579$'}
+20:46:49.331  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/login']
+20:46:49.387  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+20:46:49.408  INFO  manager.ListenerWD - Location of element(1169, 34)
+20:46:49.502  INFO  manager.ListenerWD - Before Find Element--->By.name: email
+20:46:49.569  INFO  manager.ListenerWD - After Find Element--->By.name: email
+20:46:49.593  INFO  manager.ListenerWD - Location of element(431, 250)
+20:46:49.897  INFO  manager.ListenerWD - Before Find Element--->By.name: password
+20:46:49.945  INFO  manager.ListenerWD - After Find Element--->By.name: password
+20:46:49.965  INFO  manager.ListenerWD - Location of element(431, 320)
+20:46:50.253  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[text()='Login']
+20:46:50.301  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Login']
+20:46:50.322  INFO  manager.ListenerWD - Location of element(431, 390)
+20:46:51.389  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:51.635  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:51.635  INFO  manager.ListenerWD - List of elements is--->1
+20:46:51.642  INFO  tests.TestBase - Assert check is Element button 'Sign out' present
+20:46:51.645  INFO  tests.TestBase - Name of method-->loginSuccessModelDP
+20:46:52.662  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:52.698  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:52.698  INFO  manager.ListenerWD - List of elements is--->1
+20:46:52.698  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[text()='Sign Out']
+20:46:52.741  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Sign Out']
+20:46:52.759  INFO  manager.ListenerWD - Location of element(1173, 39)
+20:46:52.820  INFO  tests.TestBase - Before method finish logout
+20:46:52.824  INFO  tests.TestBase - Test data---> User{email='sonya@gmail.com', password='Ss12345$'}
+20:46:52.825  INFO  manager.ListenerWD - Before Find Element--->By.cssSelector: a[href='/login']
+20:46:52.867  INFO  manager.ListenerWD - After Find Element--->By.cssSelector: a[href='/login']
+20:46:52.884  INFO  manager.ListenerWD - Location of element(1151, 33)
+20:46:52.940  INFO  manager.ListenerWD - Before Find Element--->By.name: email
+20:46:52.983  INFO  manager.ListenerWD - After Find Element--->By.name: email
+20:46:53.004  INFO  manager.ListenerWD - Location of element(431, 250)
+20:46:53.307  INFO  manager.ListenerWD - Before Find Element--->By.name: password
+20:46:53.347  INFO  manager.ListenerWD - After Find Element--->By.name: password
+20:46:53.366  INFO  manager.ListenerWD - Location of element(431, 320)
+20:46:53.691  INFO  manager.ListenerWD - Before Find Element--->By.xpath: //button[text()='Login']
+20:46:53.729  INFO  manager.ListenerWD - After Find Element--->By.xpath: //button[text()='Login']
+20:46:53.750  INFO  manager.ListenerWD - Location of element(431, 390)
+20:46:54.820  INFO  manager.ListenerWD - Before Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:54.853  INFO  manager.ListenerWD - After Find ElementS--->By.xpath: //button[text()='Sign Out']
+20:46:54.853  INFO  manager.ListenerWD - List of elements is--->1
+20:46:54.853  INFO  tests.TestBase - Assert check is Element button 'Sign out' present
