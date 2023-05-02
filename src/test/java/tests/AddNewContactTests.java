@@ -12,7 +12,7 @@ import java.util.Random;
 import static tests.TestBase.app;
 
 public class AddNewContactTests extends TestBase {
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("inna_83@gmail.com").withPassword("Aa13579$"));
@@ -41,7 +41,7 @@ public class AddNewContactTests extends TestBase {
         Assert.assertTrue(app.helperContact().isContactAddedByPhone(contact.getPhone()));
     }
 
-        @Test
+        @Test(groups = {"smoke","regress","retest"})
     public void addNewContactSuccess() {
         int i = new Random().nextInt(1000) + 1000;
         Contact cont = Contact.builder()

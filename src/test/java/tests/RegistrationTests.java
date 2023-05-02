@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class RegistrationTests extends TestBase {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition() {
         if (app.getHelperUser().isLogged()) {
             app.getHelperUser().Logout();
@@ -36,7 +36,7 @@ public class RegistrationTests extends TestBase {
         logger.info("Assert check is massage 'No Contacts here!' present");
     }
 
-    @Test(description = "Bug  report N23467 Fixed")
+    @Test(description = "Bug  report N23467 Fixed",groups = {"smoke"})
     public void registrationWrongEmail() {
         logger.info("Start test with name 'Registration with wrong Email'");
 

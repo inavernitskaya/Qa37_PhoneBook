@@ -24,9 +24,24 @@ dependencies {
 test {
     useTestNG()
 }
+task scoup(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/scoup.xml'
+    }
+}
 
-task qa(type:Test){
-    useTestNG(){
+task team(type: Test) {
+    useTestNG() {
+        def groups = System.getProperty('groups')
+        if (groups != null) {
+            includeGroups groups
+        }
+        suites 'src/test/resources/base.xml'
+    }
+}
+
+task qa(type: Test) {
+    useTestNG() {
         def suite = System.getProperty('suite', '')
 
         if (suite.equals('quick')) {
@@ -38,7 +53,7 @@ task qa(type:Test){
         }
 
     }
-    if(project.hasProperty('browser')){
+    if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
     }
 

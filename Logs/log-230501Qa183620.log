@@ -1,0 +1,4 @@
+18:36:20.739  INFO  tests.TestBase - Test data---> email: 'inna_83gmail.com' & password: 'Aa13579$'
+18:36:20.755  INFO  tests.TestBase - Start test with name 'Registration with wrong Email'
+18:36:20.756  INFO  tests.TestBase - Tests run with data:--->User{email='dongmail.com', password='Don12345$'}
+18:36:20.760  INFO  tests.TestBase - Tests run with data:--->Contact(name=Kate1959, lastName=Ivanov, email=katya1959@mail.com, address=London,Trafalgar sq,5, phone=748494941959, description=null)
