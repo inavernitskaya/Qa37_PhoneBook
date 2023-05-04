@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 import static tests.TestBase.app;
-
+//for jenkins
 public class AddNewContactTests extends TestBase {
     @BeforeClass(alwaysRun = true)
     public void preCondition() {
