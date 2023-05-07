@@ -59,6 +59,40 @@ task qa(type: Test) {
     if (project.hasProperty('browser')) {
         systemProperty 'browser', "${browser}"
     }
+}
 
+    task login1(type: Test) {
+        useTestNG() {
+            suites 'src/test/resources/login1.xml'
+        }
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+    }
 
+task regist(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/regist.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task newcont(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/regist.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task delcont(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/delcont.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
 }
