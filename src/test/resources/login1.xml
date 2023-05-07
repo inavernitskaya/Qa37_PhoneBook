@@ -2,11 +2,16 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
+
+        <groups>
+            <run>
+                <include name="logon"/>
+            </run>
+        </groups>
         <classes>
             <class name="tests.LoginTests" />
 
         </classes>
     </test>
-
 
 </suite>

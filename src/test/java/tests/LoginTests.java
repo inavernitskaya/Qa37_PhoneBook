@@ -64,7 +64,7 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is Element button 'Sign out' present");
     }
 
-    @Test(groups = {"smoke"})
+    @Test(groups = {"logon"})
     public void loginWrongEmail() {
         logger.info("Test data---> email: 'inna_83gmail.com' & password: 'Aa13579$'");
         app.getHelperUser().openLoginRegistrationForm();
@@ -74,7 +74,7 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is alert present with text  button 'Wrong email or password'");
     }
 
-    @Test
+    @Test(groups = {"logon"})
     public void loginWrongPassword() {
         logger.info("Test data---> email: 'inna_83@gmail.com' & password: 'Aa13'");
         app.getHelperUser().openLoginRegistrationForm();
@@ -84,7 +84,7 @@ public class LoginTests extends TestBase {
         logger.info("Assert check is alert present with text  button 'Wrong email or password'");
     }
 
-    @Test
+    @Test(groups = {"logon"})
     public void loginUnregisteredUser() {
         logger.info("Test data---> email: 'pinokio@gmail.com' & password: 'Aa13975425$'");
         app.getHelperUser().openLoginRegistrationForm();
