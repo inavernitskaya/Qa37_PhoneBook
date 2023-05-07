@@ -60,7 +60,7 @@ public class AddNewContactTests extends TestBase {
         Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(cont.getPhone()));
     }
 
-    @Test
+    @Test(groups = {"contact"})
     public void addNewContactWrongName() {
         Contact cont = Contact.builder()
                 .name("")
@@ -79,7 +79,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = {"contact"})
     public void addNewContactWrongAddress() {
         Contact cont = Contact.builder()
                 .name("Kate")
@@ -98,7 +98,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = {"contact"})
     public void addNewContactWrongLastName() {
         int i = new Random().nextInt(1000) + 1000;
         Contact cont = Contact.builder()
@@ -139,7 +139,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
+    @Test(groups = {"contact"})
     public void addNewContactWrongEmail() {
         Contact cont = Contact.builder()
                 .name("Kate")
