@@ -17,7 +17,7 @@ public class RegistrationTests extends TestBase {
         }
     }
 
-    @Test(groups = {"reg"})
+    @Test(groups = "reg")
     public void registrationSuccess() {
         logger.info("Start test with name 'RegistrationSuccess'");
         Random random = new Random();
@@ -56,7 +56,7 @@ public class RegistrationTests extends TestBase {
         logger.info("Assert check is massage 'Wrong email or password format'");
     }
 
-    @Test(groups = {"reg"})
+    @Test(groups = "reg")
     public void registrationWrongPassword()// public void registrationNeValidPasswordExistUser()
     {
         logger.info("Start test with name 'Registration with wrong Password'");
@@ -78,7 +78,7 @@ public class RegistrationTests extends TestBase {
     }
 
 
-    @Test(groups = {"reg"})
+    @Test(groups = "reg")
     public void registrationExistsUser() {
         logger.info("Start test with name 'Registration of Exist User'");
 
