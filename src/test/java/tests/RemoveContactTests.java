@@ -20,7 +20,7 @@ public class RemoveContactTests extends TestBase {
     }
 
 
-    @Test(groups = "smoke")
+    @Test(groups = "smoke",delcont)
     public void removeFirstContact() {
         Assert.assertEquals(app.helperContact().removeOneContact(), 1);
 
